@@ -9,3 +9,6 @@ app
   .then(() => {
     console.log('HTTP Server Running!')
   })
+
+// ORM - Object Relational Mapper
+// Prisma - ORM
