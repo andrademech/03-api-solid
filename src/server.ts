@@ -7,8 +7,5 @@ app
     port: env.PORT,
   })
   .then(() => {
-    console.log('HTTP Server Running!')
+    console.log(`HTTP Server Running on port: http://localhost/${env.PORT}`)
   })
-
-// ORM - Object Relational Mapper
-// Prisma - ORM
