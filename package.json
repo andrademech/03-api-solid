@@ -9,7 +9,8 @@
     "build": "tsup src --out-dir build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "@prisma/client": "4.13.0",
+    "@vitest/ui": "0.31.0",
     "bcryptjs": "2.4.3",
     "dotenv": "16.0.3",
     "fastify": "^4.17.0",
