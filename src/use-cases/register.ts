@@ -30,8 +30,6 @@ export class RegisterUseCase {
       throw new UserAlreadyExistsError()
     }
 
-    // const prismaUsersRepository = new PrismaUsersRepository()
-
     await this.usersRepository.create({
       name,
       email,
