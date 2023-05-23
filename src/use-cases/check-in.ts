@@ -1,5 +1,6 @@
 import { CheckIn } from '@prisma/client'
 import { CheckInsRepository } from '@/repositories/check-ins-repository'
+import { UserAlreadyCheckedInTodayError } from './errors/user-already-checked-in-today'
 
 interface CheckInUseCaseRequest {
   userId: string
@@ -23,7 +24,7 @@ export class CheckInUseCase {
     )
 
     if (checkInOnSameDay) {
-      throw new Error('User already checked in today')
+      throw new UserAlreadyCheckedInTodayError()
     }
 
     const checkIn = await this.checkInsRepository.create({
