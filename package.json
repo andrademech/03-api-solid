@@ -10,7 +10,7 @@
     "test:install-prisma-environment": "npm link vitest-environment-prisma",
     "build": "tsup src --out-dir build",
     "test": "vitest run --dir src/use-cases",
-    "test:watch": "vitest --dir src/use-cases --watch",
+    "test:watch": "vitest --dir src/use-cases",
     "pretest:e2e": "run-s test:create-prisma-environment test:install-prisma-environment",
     "test:e2e": "vitest run --dir src/http",
     "test:e2e:watch": "vitest --dir src/http",
